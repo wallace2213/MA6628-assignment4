@@ -39,8 +39,8 @@ min_RMSE = 200  # minimal RMSE initialization
 opt = sop.fmin(BSM_error_function, 0.5,
                maxiter=500, maxfun=750,
                xtol=0.000001, ftol=0.000001)
-print(opt)
-[0.11823409] #the implied volatility with given call price
+print('the implied volatility=',opt[0])
+# the implied volatility= 0.11823408603668178  #the implied volatility with given call price
 # check
 BSM_call_value(S0, K, 0, T, r, 0.11823409)
 9.230000740041135   #with the volatility=11.8%, the BSM call price=market call price
